@@ -46,9 +46,21 @@ textarea {
 .container {
   margin-right: auto;
   margin-left: auto;
-  width: 1158px;
+  max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 .section {
@@ -111,17 +123,163 @@ textarea {
 
 .main-nav {
   display: flex;
+  width: 100%;
 }
 
 /* Site nav */
 
 .site-nav {
-  display: flex;
-  margin-left: 76px;
+  display: none;
 }
 
 .site-nav .item:not(:last-child) {
   margin-right: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    margin-left: 76px;
+  }
+}
+
+.header-burger {
+  cursor: pointer;
+  display: block;
+  border: transparent;
+  background-color: var(--white-color);
+  margin-left: auto;
+}
+
+.icon-burger {
+  fill: black;
+}
+
+@media screen and (min-width: 768px) {
+  .header-burger {
+    display: none;
+  }
+}
+
+/* mobile menu */
+
+.mobile-menu-close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.mobile-menu {
+  /* pointer-events: none;
+  visibility: hidden;
+  opacity: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 80px 35px 40px 40px;
+  background-color: var(--white-color);
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform var(--transition-duration) var(--transition-cubic);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: var(--pressed-state-color);
+}
+
+.mobile-address {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+  margin-top: auto;
+}
+
+.mobile-menu-link {
+  text-decoration: none;
+  font-style: normal;
+  color: var(--text-color);
+  transition: color var(--transition-duration) var(--transition-cubic);
+}
+
+.mobile-menu-link.phone {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.mobile-menu-link.mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: var(--primary-brand-color);
+}
+
+/* mobile menu icons */
+
+.mobile-icon-list {
+  display: flex;
+  gap: 56px;
+}
+
+.mobile-media-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transition-duration)
+    var(--transition-cubic);
+}
+
+.mobile-media-item:hover,
+.mobile-media-item:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.mobile-social-icon {
+  fill: var(--light-color);
 }
 
 .site-nav-link {
@@ -186,17 +344,34 @@ textarea {
 
 /* Address */
 .auth-nav {
-  display: flex;
-  margin-left: auto;
-}
-
-.address-list .item:not(:last-child) {
-  margin-right: 40px;
+  display: none;
 }
 
 .address-list {
   display: flex;
   list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: block;
+    margin-left: auto;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-list {
+    flex-direction: row;
+    align-items: center;
+  }
+  .address-list .item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .address-link {
