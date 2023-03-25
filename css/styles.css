@@ -386,6 +386,7 @@ textarea {
   letter-spacing: 0.02em;
   color: var(--text-color);
   transition: color var(--transition-duration) var(--transition-cubic);
+  white-space: nowrap;
 }
 
 .address-link:hover,
@@ -394,31 +395,6 @@ textarea {
 }
 
 /* Footer */
-
-@media screen and (min-width: 768px) {
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .footer-left {
-    margin-bottom: 0;
-  }
-  .subscribe-form {
-    display: flex;
-    gap: 24px;
-  }
-
-  .footer-input {
-    width: 264px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-center {
-    margin-right: 80px;
-  }
-}
 
 .footer {
   padding-top: 100px;
@@ -429,8 +405,8 @@ textarea {
 .footer-left {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  margin-right: 120px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 72px;
 }
 
@@ -463,9 +439,39 @@ textarea {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    margin-bottom: 0;
+    margin-right: 120px;
+  }
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-center {
+    margin-right: 80px;
+  }
+}
+
 /* Footer-icons */
 .footer-center {
   margin-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-media {
@@ -501,8 +507,22 @@ textarea {
 
 /* Subscribe */
 
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .footer-input {
-  width: 398px;
+  width: 100%;
   height: 40px;
   background-color: transparent;
   color: var(--white-color);
@@ -511,6 +531,7 @@ textarea {
   border-radius: 4px;
   padding: 8px 16px;
   outline: transparent;
+  margin-bottom: 16px;
 }
 .footer-input::placeholer {
   color: rgba(255, 255, 255, 0.6);
@@ -619,7 +640,7 @@ textarea {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   margin-top: 8px;
-  width: 396px;
+  width: 100%;
 }
 
 .advantage-item-text:not(:last-child) {
@@ -688,12 +709,12 @@ textarea {
 /* What are we doing */
 
 .adapt-hidden-section {
-  visibility: hidden;
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
   .adapt-hidden-section {
-    visibility: visible;
+    display: block;
   }
 
   .direction-title {
@@ -714,6 +735,12 @@ textarea {
 
 .team {
   background-color: var(--light-color);
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
