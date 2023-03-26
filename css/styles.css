@@ -610,7 +610,7 @@ textarea {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero-desctop.jpg);
+    url(../images/hero/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -624,7 +624,7 @@ textarea {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/hero-desctop@2x.jpg);
+      url(../images/hero/hero-image@2x.jpg);
     background-size: cover;
   }
 }
