@@ -610,20 +610,42 @@ textarea {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero-image.jpg);
+    url(../images/hero/hero-desctop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-desctop@2x.jpg);
+    background-size: cover;
+  }
+}
+
 .hero-title {
-  max-width: 500px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 56px;
-  line-height: calc(60 / 56);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
   letter-spacing: 0.02em;
   color: var(--white-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    max-width: 500px;
+    font-size: 56px;
+    line-height: calc(60 / 56);
+  }
 }
 
 .hero-button {
@@ -1074,10 +1096,11 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  height: 584px;
+  width: 392px;
+  height: 586px;
   background-color: var(--modal-window-bckg);
-  padding: 72px 24px 24px 24px;
+  border-radius: 4px;
+  padding: 72px 16px 24px 16px;
 }
 
 .modal-close-btn {
@@ -1276,4 +1299,20 @@ textarea {
 
 .modal-button {
   text-align: center;
+}
+
+@media screen and (min-width: 786px) {
+  .modal {
+    width: 408px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    height: 584px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
