@@ -187,6 +187,7 @@ textarea {
 .mobile-menu {
   pointer-events: none;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   padding: 80px 35px 40px 40px;
@@ -202,6 +203,7 @@ textarea {
 
 .mobile-menu.is-open {
   transform: translateX(0);
+  pointer-events: initial;
 }
 
 .mobile-nav-item:not(:last-child) {
@@ -216,11 +218,6 @@ textarea {
   line-height: calc(40 / 36);
   letter-spacing: 0.02em;
   text-transform: capitalize;
-}
-
-.mobile-nav-link:hover,
-.mobile-nav-link:focus {
-  color: var(--pressed-state-color);
 }
 
 .mobile-address {
@@ -244,6 +241,7 @@ textarea {
   line-height: calc(40 / 36);
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  color: var(--primary-brand-color);
 }
 
 .mobile-menu-link.mail {
@@ -251,11 +249,6 @@ textarea {
   font-size: 20px;
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
-}
-
-.mobile-menu-link:hover,
-.mobile-menu-link:focus {
-  color: var(--primary-brand-color);
 }
 
 /* mobile menu icons */
@@ -625,7 +618,6 @@ textarea {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/hero-image@2x.jpg);
-    background-size: cover;
   }
 }
 
