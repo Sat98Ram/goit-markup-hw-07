@@ -905,10 +905,21 @@ textarea {
   gap: 16px;
   justify-content: center;
 }
+@media screen and (max-width: 767.98px) {
+  .customer-icon-field:nth-child(n + 3) {
+    margin-top: 48px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .customers-list {
     gap: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .customer-icon-field:nth-child(n + 4) {
+    margin-top: 48px;
   }
 }
 
