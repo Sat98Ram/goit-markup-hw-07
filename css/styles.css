@@ -989,13 +989,6 @@ textarea {
   margin-top: 72px;
 }
 
-@media screen and (min-width: 768px) {
-  .work-examples {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .work-link {
   text-decoration: none;
 }
@@ -1019,16 +1012,7 @@ textarea {
 .work-card {
   background-color: var(--white-color);
   width: 360px;
-  margin-right: 24px;
   margin-top: 48px;
-}
-
-.work-card:nth-child(-n + 3) {
-  margin-top: 0;
-}
-
-.work-card:nth-child(3n) {
-  margin-right: 0;
 }
 
 .work-card-bottom {
@@ -1075,6 +1059,40 @@ textarea {
 .work-card-link:hover .overlay,
 .work-card-link:focus .overlay {
   transform: translate(0, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .work-examples {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work-card {
+    margin-right: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* .work-card:nth-child(-n + 2) {
+    margin-top: 0;
+  } */
+
+  .work-card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work-card {
+    margin-right: 24px;
+  }
+  .work-card:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+
+  .work-card:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 /* Modal window */
